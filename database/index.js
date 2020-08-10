@@ -3,4 +3,4 @@ const config = require('../knexfile');
 
 const nodeEnv = process.env.NODE_ENV;
 
-module.exports = knex(cosnfig[nodeEnv]);
+module.exports = knex(config[nodeEnv]);
