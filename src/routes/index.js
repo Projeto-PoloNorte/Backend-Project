@@ -1,11 +1,11 @@
 const {Router} = require("express");
-//const equipments = require("./equipments");
+const equipments = require("./equipments");
 //const maintenances = require("./maintenances");
 const users = require("./users");
 
 const router = new Router();
 
-//router.use(equipments);
+router.use(equipments);
 //router.use(maintenances);
 router.use(users);
 

@@ -1,5 +1,5 @@
 const service = require("../services/equipments");
-const Order = require("../models/equipments");
+const Equipment = require("../models/equipments");
 const handleError = require("./handleError");
 
 const getAll = async (req, res) => {
@@ -11,7 +11,15 @@ const getAll = async (req, res) => {
     }
 };
 
+const getById = (req, res) => {
+    service
+     .getById(req.params.id)
+     .then((equipment) => res.json(equipment))
+     .catch((error) => handleError(res, error));
+ };
+ 
+
 module.exports = {
     getAll,
-   
+    getById,  
 };

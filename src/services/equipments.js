@@ -3,11 +3,11 @@ const repository = require("../repositories/equipments");
 const getAll = () => repository.getAll();
 
 const getById = async (id) => {
-    const product = await repository.getById(id);
-    if (!product) {
+    const equipment = await repository.getById(id);
+    if (!equipment) {
         throw {status: 404, message : "Not found"};
     }
-    return product;
+    return equipment;
 };
 module.exports = {
     getAll,
