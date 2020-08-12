@@ -10,7 +10,7 @@ const authenticate = async (req, res, next) => {
             res.status(403).json({ status: 403, message: "Forbidden"});
         };
 
-        const token = authorization.split(' ')[1]
+        const token = authorization.split(' ')[1];
 
         const { id } = jwt.verifyToken(token);
 

@@ -1,7 +1,5 @@
 const repository = require("../repositories/equipments");
 
-const getAll = () => repository.getAll();
-
 const getById = async (id) => {
     const equipment = await repository.getById(id);
     if (!equipment) {
@@ -10,6 +8,5 @@ const getById = async (id) => {
     return equipment;
 };
 module.exports = {
-    getAll,
     getById,
 };
