@@ -17,7 +17,7 @@ if (process.env.NODE_ENV == "development") {
       migrations: {
         tableName: 'knex_migrations'
       },
-      useNullAsDefault: true,
+
     },
   
     staging: {
