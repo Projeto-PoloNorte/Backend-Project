@@ -1,7 +1,7 @@
 const moment = require('moment');
 const utcNow = moment().utc().format();
 
-module.exports = function Product(data){
+module.exports = function Equipment (data){
     this.id = data.id
     this.year = data.year,
     this.model = data.model,

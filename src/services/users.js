@@ -1,4 +1,4 @@
-//const User = require("../models/User");
+
 const {encryptPassword} = require('./utils/encrypt')
 const repository = require("../repositories/users");
 const { createToken } =require("./utils/jwt")
