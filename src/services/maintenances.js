@@ -1,5 +1,4 @@
 const repository = require("../repositories/maintenances");
-const Maintenance = require("../models/maintenances");
 const moment = require("moment");
 
 

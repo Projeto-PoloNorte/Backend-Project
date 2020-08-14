@@ -3,7 +3,7 @@ const app = express();
 const routes = require("./src/routes")
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 2430;
+const port = process.env.PORT || 2500;
 const cors = require('cors');
 
 app.use(bodyParser.urlencoded({ extended: false})); 

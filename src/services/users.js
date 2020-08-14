@@ -21,6 +21,22 @@ const login = async loginData => {
   };
 };
 
+const changePassword = async passwordData => {
+    const user = await repository.getById( passwordData.id);
+    if(!user){
+        throw {status: 401, message: "Not authorized"};
+    }
+    const {encryptedPassword} = encryptPassword(passwordData.password, user.salt);
+    if(encryptedPassword !== user.password) {
+        throw { status: 409, message: "Precondition Failed"};
+    };
+    const {encryptedPassword: encrypPass} = encryptPassword(passwordData.newpassword, user.salt)
+    
+    
+    await repository.update(user.id, {password: encrypPass })
+  
+  };
+
 const getById = async (id) => {
     const user = await repository.getOne({ id: id});
     if (!user.id) {
@@ -29,7 +45,10 @@ const getById = async (id) => {
     return user;
 };
 
+
+
 module.exports = {
     login,
     getById,
+    changePassword,
 };

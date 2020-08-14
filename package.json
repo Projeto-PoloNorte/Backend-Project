@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/Projeto-PoloNorte/Backend-Project#readme",
   "dependencies": {
+    "@sendgrid/mail": "^7.2.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -36,6 +37,7 @@
     "knex": "^0.21.2",
     "moment": "^2.27.0",
     "morgan": "^1.10.0",
+    "nodemailer": "^6.4.11",
     "nodemon": "^2.0.4",
     "pg": "^8.3.0",
     "sqlite3": "^5.0.0"
